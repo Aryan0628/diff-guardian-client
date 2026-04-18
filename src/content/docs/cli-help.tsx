@@ -79,7 +79,7 @@ npx dg help`} language="bash" />
       <h2 id="version">Version</h2>
       <CodeBlock
         code={`$ npx dg --version
-diff-guardian v0.1.0`}
+diff-guardian v0.1.1`}
         language="bash"
       />
 
