@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Aryan0628/diff-guardian/main/.github/banner.png" alt="Diff Guardian" width="500" />
+</p>
+
+<p align="center">
+  <strong>The official documentation and marketing site for <a href="https://github.com/Aryan0628/diff-guardian">Diff Guardian</a>.</strong>
+</p>
+
+<p align="center">
+  <a href="https://diff-guardian.dev">Live Site</a> &middot;
+  <a href="https://github.com/Aryan0628/diff-guardian">CLI Repository</a>
+</p>
+
+---
+
+## About
+
+This is the source code for [diff-guardian.dev](https://diff-guardian.dev) — the documentation, guides, and landing page for the Diff Guardian CLI.
+
+### What's inside
+
+- **Landing page** — Hero, features, terminal demo, and language support
+- **Documentation** — 25+ pages covering architecture, CLI reference, all 26 classification rules, configuration, CI/CD integration, and git hooks
+- **Search** — `Cmd+K` powered search across all docs
+- **Dark/Light mode** — Theme toggle with system preference detection
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| [Next.js 16](https://nextjs.org) | App Router, static generation, file-based routing |
+| [React 19](https://react.dev) | UI components |
+| [Tailwind CSS 4](https://tailwindcss.com) | Styling |
+| [Lenis](https://lenis.darkroom.engineering) | Smooth scrolling |
+| [Lucide React](https://lucide.dev) | Icons |
+| [TypeScript](https://www.typescriptlang.org) | Type safety |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js >= 18
+- npm >= 9
+
+### Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Production build
+npm run build
 
-## Learn More
+# Serve the production build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/
+│   ├── page.tsx                    # Landing page
+│   ├── layout.tsx                  # Root layout (fonts, metadata, providers)
+│   ├── globals.css                 # Global styles
+│   └── docs/[[...slug]]/           # Dynamic docs routing
+│       └── page.tsx                # Docs page with slug → component mapping
+│
+├── components/
+│   ├── Hero.tsx                    # Landing hero section
+│   ├── Features.tsx                # Feature grid
+│   ├── Terminal.tsx                # Interactive terminal demo
+│   ├── Languages.tsx               # Supported languages section
+│   ├── Navbar.tsx                  # Navigation bar
+│   ├── Footer.tsx                  # Site footer
+│   ├── SearchModal.tsx             # Cmd+K search modal
+│   ├── SmoothScroll.tsx            # Lenis smooth scroll provider
+│   ├── SyntaxBackground.tsx        # Animated code background
+│   ├── ThemeProvider.tsx           # Dark/light mode provider
+│   ├── ThemeToggle.tsx             # Theme switch button
+│   └── docs/
+│       ├── DocsLayout.tsx          # Docs page layout (sidebar + content)
+│       ├── DocsSidebar.tsx         # Docs navigation sidebar
+│       └── RuleDetailPage.tsx      # Individual rule detail pages
+│
+└── content/
+    └── docs/                       # Documentation content (TSX components)
+        ├── getting-started.tsx
+        ├── how-it-works.tsx
+        ├── architecture.tsx
+        ├── cli-check.tsx
+        ├── cli-compare.tsx
+        ├── ...
+        └── rules-data.ts           # Classification rules data
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Adding Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All docs are TSX components in `src/content/docs/`. To add a new page:
+
+1. Create a new file in `src/content/docs/your-page.tsx`
+2. Register the slug → component mapping in `src/app/docs/[[...slug]]/page.tsx`
+3. Add it to the sidebar in `src/components/docs/DocsSidebar.tsx`
+
+---
+
+## License
+
+[ISC](https://github.com/Aryan0628/diff-guardian/blob/main/LICENSE) &copy; Aryan Gupta
