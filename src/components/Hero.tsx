@@ -34,7 +34,7 @@ export default function Hero() {
           <p className="hero-subtitle">
             Parses both sides of a git diff into ASTs, classifies every structural
             change, and traces call sites to show you exactly what breaks.
-            {" "}<strong>TypeScript</strong>, <strong>Go</strong>, <strong>Python</strong>, <strong>Java</strong>, <strong>Rust</strong> — zero config.
+            {" "}<strong>TypeScript</strong>, <strong>Go</strong>, <strong>Python</strong>, <strong>Java</strong>, <strong>Rust</strong> — zero config. Say goodbye to PR merge headaches.
           </p>
         </div>
 
