@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://diff-guardian.dev">Live Site</a> &middot;
+  <a href="https://diffguardian.space">Live Site</a> &middot;
   <a href="https://github.com/Aryan0628/diff-guardian">CLI Repository</a>
 </p>
 
@@ -15,7 +15,7 @@
 
 ## About
 
-This is the source code for [diff-guardian.dev](https://diff-guardian.dev) — the documentation, guides, and landing page for the Diff Guardian CLI.
+This is the source code for [diffguardian.space](https://diffguardian.space) — the documentation, guides, and landing page for the Diff Guardian CLI.
 
 ### What's inside
 
