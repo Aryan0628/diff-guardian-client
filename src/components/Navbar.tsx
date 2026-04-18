@@ -27,7 +27,7 @@ export default function Navbar() {
             diff-guardian
           </span>
           <span className="navbar-version" style={{ fontFamily: "var(--font-jetbrains)" }}>
-            v0.1.1
+            v0.1.3
           </span>
         </a>
 

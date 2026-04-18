@@ -221,7 +221,7 @@ const COMMANDS: Record<string, TermLine[]> = {
 
   "npx dg --version": [
     { text: "", type: "blank" },
-    { text: "  diff-guardian v0.1.1", type: "header" },
+    { text: "  diff-guardian v0.1.3", type: "header" },
   ],
 };
 
