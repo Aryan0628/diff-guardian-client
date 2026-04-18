@@ -26,7 +26,7 @@ export default function Footer() {
               <a href="https://github.com/Aryan0628/diff-guardian" target="_blank" rel="noopener noreferrer" className="footer-link" style={{ fontFamily: "var(--font-space-grotesk)" }}>GitHub Repository</a>
               <a href="https://github.com/Aryan0628/diff-guardian/issues/new" target="_blank" rel="noopener noreferrer" className="footer-link" style={{ fontFamily: "var(--font-space-grotesk)" }}>Report a Bug</a>
               <a href="https://github.com/Aryan0628/diff-guardian/issues/new" target="_blank" rel="noopener noreferrer" className="footer-link" style={{ fontFamily: "var(--font-space-grotesk)" }}>Request a Feature</a>
-              <a href="mailto:diffguardian.in@gmail.com" className="footer-link" style={{ fontFamily: "var(--font-space-grotesk)" }}>Contact Us</a>
+              <a href="mailto:aryan072806@gmail.com" className="footer-link" style={{ fontFamily: "var(--font-space-grotesk)" }}>Contact Us</a>
             </div>
           </div>
 
